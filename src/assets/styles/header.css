@@ -1,0 +1,44 @@
+header {
+  background-color: rgb(199, 30, 32);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-link,
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+a:hover {
+  color: rgb(233, 50, 30);
+}
+
+/* Add for mobile devices */
+@media only screen and (max-width: 600px) {
+  header {
+    font-size: 0.6rem;
+  }
+
+  .nav-link,
+  a {
+    margin-right: 12.5px;
+  }
+}

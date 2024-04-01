@@ -1,0 +1,341 @@
+.music-list {
+  margin: 20px auto;
+  max-width: 80%;
+  padding: 0 20px;
+}
+
+.music-list p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* filter options */
+.filter-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-options button {
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-options button:hover {
+  color: rgb(233, 50, 30);
+}
+
+.filter-options button.active {
+  background-color: rgb(233, 50, 30);
+}
+
+/* music search field */
+.search-input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* table buttons */
+.info-button,
+.mention-button,
+.rating-button,
+.listen-button,
+.share-button {
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.info-button:hover,
+.mention-button:hover,
+.rating-button:hover,
+.listen-button:hover,
+.share-button:hover {
+  color: rgb(233, 50, 30);
+}
+
+/* Style for a disabled button */
+.listen-music-button:disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
+
+.share-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.share-content {
+  text-align: center;
+}
+
+.copy-button,
+.email-button {
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1.5%;
+}
+
+.fb-button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1.5%;
+}
+
+.fb-button:hover {
+  background-color: #8b9dc3;
+}
+
+.twitter-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1.5%;
+}
+
+.twitter-button:hover {
+  background-color: white;
+  color: #000000;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.custom-alert.show {
+  animation: fadeInOut 3s forwards;
+}
+
+/* Mention Pop-up */
+.mention-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.mention-question {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.mention-modal button {
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.mention-modal button:hover {
+  color: rgb(233, 50, 30);
+}
+
+.mention-modal button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Rating Modal */
+.rating-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.rating-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.rating-modal .rating-stars {
+  text-align: center;
+}
+
+.rating-modal .star {
+  font-size: 24px;
+  margin: 5px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.rating-modal .star:hover,
+.rating-modal .star.selected {
+  color: gold;
+}
+
+.rating-modal button {
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.rating-modal button:hover {
+  color: rgb(233, 50, 30);
+}
+
+/* Add for mobile devices */
+@media only screen and (max-width: 600px) {
+  .music-list {
+    max-width: 90%;
+  }
+
+  .music-list p {
+    font-size: 1rem;
+  }
+
+  .filter-options {
+    gap: 5px;
+  }
+
+  .filter-options button {
+    padding: 5px 10px;
+  }
+
+  table th,
+  table td {
+    padding: 2px;
+    font-size: 6px;
+  }
+
+  .info-button,
+  .mention-button,
+  .rating-button,
+  .listen-button,
+  .share-button {
+    padding: 2px 4px;
+    font-size: 5px;
+  }
+
+  .disabled-button {
+    padding: 2px 4px;
+    font-size: 5px;
+  }
+}

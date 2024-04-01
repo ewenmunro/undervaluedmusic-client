@@ -1,0 +1,33 @@
+.addmusic {
+  height: 85vh;
+}
+
+.addmusic h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.addmusic p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .addmusic {
+    height: 0;
+  }
+
+  .addmusic h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .addmusic {
+    height: 0;
+  }
+
+  .addmusic h1 {
+    font-size: 2rem;
+  }
+}

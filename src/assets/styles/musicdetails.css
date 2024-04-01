@@ -1,0 +1,181 @@
+.music-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.music-details h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.music-details p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.custom-alert.show {
+  animation: fadeInOut 3s forwards;
+}
+
+.music-details-listen-button,
+.music-details-copy-button,
+.music-details-email-button {
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1.5%;
+}
+
+.music-details-fb-button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1.5%;
+}
+
+.music-details-fb-button:hover {
+  background-color: #8b9dc3;
+}
+
+.music-details-twitter-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1.5%;
+}
+
+.music-details-twitter-button:hover {
+  background-color: white;
+  color: #000000;
+}
+
+.music-details-share-buttons {
+  margin-bottom: 5%;
+  width: 80%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.music-details-disable:disabled {
+  background-color: #f8f8f8;
+  color: #666;
+  border: 1px solid #ddd;
+  cursor: not-allowed;
+  pointer-events: none;
+  margin-bottom: 1.5%;
+}
+
+.listen-button:hover,
+.copy-button:hover,
+.email-button:hover {
+  color: rgb(233, 50, 30);
+}
+
+/* Style for a disabled button */
+.listen-button:disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
+
+.music-details-error-message {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .music-details h1 {
+    font-size: 2.5rem;
+  }
+
+  .music-details p {
+    font-size: 1rem;
+  }
+
+  .music-details-listen-button,
+  .music-details-share-button {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+
+  .music-details-share-button {
+    margin-bottom: 15%;
+  }
+
+  .music-details-disable {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .music-details h1 {
+    font-size: 2rem;
+  }
+
+  .music-details p {
+    font-size: 1rem;
+  }
+
+  .music-details-listen-button,
+  .music-details-share-button {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+
+  .music-details-share-button {
+    margin-bottom: 15%;
+  }
+
+  .music-details-disable {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+}

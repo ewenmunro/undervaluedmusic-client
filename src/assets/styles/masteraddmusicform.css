@@ -1,0 +1,104 @@
+.add-music-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.add-music-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.add-music-form label {
+  margin-bottom: 8px;
+}
+
+.add-music-form input[type="text"],
+.add-music-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.add-music-form textarea {
+  resize: vertical;
+  height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reject-music-button {
+  margin-top: 20px;
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reject-music-button:hover {
+  color: rgb(207, 37, 37);
+}
+
+.add-music-button {
+  margin-top: 20px;
+  background-color: rgb(199, 30, 32);
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-music-button:hover {
+  color: rgb(233, 50, 30);
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .add-music-form input[type="text"],
+  .add-music-form textarea {
+    height: 10px;
+    font-size: 1rem;
+  }
+
+  .add-music-form textarea {
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .add-music-form input[type="text"],
+  .add-music-form textarea {
+    height: 10px;
+    font-size: 1rem;
+  }
+
+  .add-music-form textarea {
+    height: 50px;
+  }
+}

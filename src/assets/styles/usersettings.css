@@ -1,0 +1,106 @@
+.user-settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-info {
+  margin-bottom: 20px;
+}
+
+.current-info h2 {
+  font-size: 2rem;
+}
+
+.current-info p {
+  font-size: 1.2rem;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.update-form h2 {
+  font-size: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.update-button {
+  background-color: rgb(199, 30, 32);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-end;
+}
+
+.update-button:hover {
+  background-color: rgb(233, 50, 30);
+}
+
+.password-error-message {
+  margin-top: 10px;
+  color: red;
+}
+
+.update-error-message {
+  margin-top: 10px;
+  color: red;
+}
+
+.update-success-message {
+  margin-top: 10px;
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .current-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .current-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .current-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .current-info p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,23 @@
+.login h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.login p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media (max-width: 768px) {
+  .login h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .login h1 {
+    font-size: 2rem;
+  }
+}

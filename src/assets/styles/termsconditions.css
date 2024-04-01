@@ -1,0 +1,65 @@
+.termsconditions h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.termsconditions h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.termsconditions p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.termsconditions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.termsconditions li {
+  text-align: center;
+}
+
+.termsconditions p a {
+  color: rgb(199, 30, 32);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.termsconditions p a:hover {
+  color: rgb(233, 50, 30);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .termsconditions h1 {
+    font-size: 2.5rem;
+  }
+
+  .termsconditions h2 {
+    font-size: 1.75rem;
+  }
+
+  .termsconditions p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .termsconditions h1 {
+    font-size: 2rem;
+  }
+
+  .termsconditions h2 {
+    font-size: 1.5rem;
+  }
+
+  .termsconditions p {
+    font-size: 1rem;
+  }
+}

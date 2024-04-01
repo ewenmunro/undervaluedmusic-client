@@ -1,0 +1,163 @@
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#agreedToTerms {
+  margin-top: 20px;
+}
+
+/* "T&Cs" & Privacy Policy checkbox */
+.sign-up-form input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+/* "T&Cs" & Privacy Policy link */
+.sign-up-form .terms-link {
+  color: rgb(199, 30, 32);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sign-up-form .terms-link:hover {
+  color: rgb(233, 50, 30);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* "T&Cs" & Privacy Policy Pop-up */
+.terms-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 600px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.terms-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: black;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.terms-content h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.terms-content h2 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.terms-content p {
+  margin-bottom: 10px;
+}
+
+.terms-content ul {
+  margin-bottom: 10px;
+}
+
+.terms-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.terms-content a {
+  color: rgb(199, 30, 32);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.terms-content a:hover {
+  color: rgb(233, 50, 30);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.terms-modal button {
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.terms-modal button:hover {
+  color: rgb(233, 50, 30);
+}
+
+.sign-up-button {
+  width: 50%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(199, 30, 32);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-up-button:hover {
+  color: rgb(233, 50, 30);
+}
+
+.password-error-message {
+  margin-bottom: 10px;
+  color: red;
+}
+
+.registration-error-message {
+  margin-top: 20px;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .input-field {
+    width: 80%;
+  }
+
+  .terms-modal {
+    width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-field {
+    width: 80%;
+  }
+
+  .terms-modal {
+    width: 300px;
+  }
+}

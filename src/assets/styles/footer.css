@@ -1,0 +1,54 @@
+footer {
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  color: white;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 2.5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: rgb(233, 50, 30);
+}
+
+/* Add for mobile devices */
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 0.34rem;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  nav,
+  a {
+    margin-right: 12px;
+  }
+
+  nav li {
+    margin: 0 2px;
+  }
+}
