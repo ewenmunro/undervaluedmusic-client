@@ -166,7 +166,7 @@ function MusicList() {
     if (music.listen_link) {
       // Make a request to generate a temporary identifier for a logged-out user
       axios
-        .get(`${apiBaseUrl}/api/read/generatetempid`)
+        .get(`${apiBaseUrl}/api/listen/generatetempid`)
         .then((response) => {
           // Retrieve temporary user id from backend
           const temporaryUserId = response.data.temporaryUserId;
@@ -175,7 +175,7 @@ function MusicList() {
           window.open(music.listen_link, "_blank");
 
           // Make an API request to log the click
-          axios.post(`${apiBaseUrl}/api/read/click`, {
+          axios.post(`${apiBaseUrl}/api/listen/click`, {
             user_id: temporaryUserId,
             music_id: music.music_id,
           });
@@ -355,7 +355,7 @@ function MusicList() {
         </td>
         <td>
           {music.listen_link ? (
-            <button className="read-button" onClick={() => listen(music)}>
+            <button className="listen-button" onClick={() => listen(music)}>
               Listen
             </button>
           ) : (

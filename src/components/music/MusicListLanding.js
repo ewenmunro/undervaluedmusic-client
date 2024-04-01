@@ -616,7 +616,7 @@ function MusicListLanding() {
 
       // Make an API request to log the click
       axios.post(
-        `${apiBaseUrl}/api/read/authclick`,
+        `${apiBaseUrl}/api/listen/authclick`,
         {
           user_id: isAuthenticated.user.user_id,
           music_id: music.music_id,
@@ -896,7 +896,7 @@ function MusicListLanding() {
           ) : (
             <div>
               {music.listen_link ? (
-                <button className="read-button" onClick={() => listen(music)}>
+                <button className="listen-button" onClick={() => listen(music)}>
                   Listen
                 </button>
               ) : (
