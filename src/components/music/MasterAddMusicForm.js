@@ -323,7 +323,8 @@ function MasterAddMusicForm({ onAddMusic }) {
         </div>
         <div>
           <label htmlFor="album" />
-          <textarea
+          <input
+            type="text"
             id="album"
             name="album"
             placeholder="Album"
@@ -342,7 +343,6 @@ function MasterAddMusicForm({ onAddMusic }) {
             onChange={handleInputChange}
           />
         </div>
-
         <div>
           <label htmlFor="listen" />
           <input

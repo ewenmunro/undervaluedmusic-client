@@ -221,7 +221,8 @@ function AddMusic({ onAddMusic }) {
         </div>
         <div>
           <label htmlFor="album" />
-          <textarea
+          <input
+            type="text"
             id="album"
             name="album"
             placeholder="Album"
