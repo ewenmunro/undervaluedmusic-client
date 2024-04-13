@@ -1,0 +1,31 @@
+.account-deleted h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.account-deleted p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media (max-width: 768px) {
+  .account-deleted h1 {
+    font-size: 2.5rem;
+  }
+
+  .account-deleted p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .account-deleted h1 {
+    font-size: 2rem;
+  }
+
+  .account-deleted p {
+    font-size: 1rem;
+  }
+}

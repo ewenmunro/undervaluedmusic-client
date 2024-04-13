@@ -1,5 +1,5 @@
 .userprofile {
-  height: 100vh;
+  height: 110vh;
 }
 
 .userprofile h1 {
@@ -17,7 +17,7 @@
 
 @media (max-width: 768px) {
   .userprofile {
-    height: 0;
+    height: 120vh;
   }
 
   .userprofile h1 {
@@ -27,7 +27,7 @@
 
 @media (max-width: 576px) {
   .userprofile {
-    height: 0;
+    height: 120vh;
   }
 
   .userprofile h1 {

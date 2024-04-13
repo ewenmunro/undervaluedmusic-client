@@ -5,6 +5,10 @@
   padding-right: 10%;
 }
 
+.promo a {
+  margin-right: 0;
+}
+
 .promo-link {
   color: rgb(199, 30, 32);
   text-decoration: none;
@@ -13,6 +17,30 @@
 
 .promo-link:hover {
   color: rgb(233, 50, 30);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.undervaluedfilms-link {
+  color: rgb(11, 49, 198);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.undervaluedfilms-link:hover {
+  color: rgb(46, 78, 251);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.undervaluedbooks-link {
+  color: rgb(8, 176, 35);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.undervaluedbooks-link:hover {
+  color: rgb(70, 248, 62);
   text-decoration: none;
   cursor: pointer;
 }

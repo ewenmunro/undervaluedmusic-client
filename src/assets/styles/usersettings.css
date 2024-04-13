@@ -70,6 +70,70 @@
   background-color: rgb(233, 50, 30);
 }
 
+.delete-account-button {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 50px 0 0 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-end;
+}
+
+.delete-account-button:hover {
+  background-color: #ff2626;
+}
+
+.delete-account-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delete-account-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.delete-account-modal p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.delete-account-modal button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+}
+
+.delete-account-modal .confirm-delete-account-button {
+  background-color: red;
+  color: white;
+}
+
+.delete-account-modal .cancel-delete-account-button {
+  background-color: grey;
+  color: white;
+}
+
+.delete-account-modal button:hover {
+  opacity: 0.8;
+}
+
 .password-error-message {
   margin-top: 10px;
   color: red;

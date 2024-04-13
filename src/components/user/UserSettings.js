@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -10,6 +11,7 @@ const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
 
 function UserSettings({ user, onUpdateUser }) {
   const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     username: user.username,
@@ -177,6 +179,73 @@ function UserSettings({ user, onUpdateUser }) {
     setShowPassword(!showPassword);
   };
 
+  const handleDeleteAccount = async () => {
+    try {
+      const token = isAuthenticated.token;
+
+      await axios.delete(`${apiBaseUrl}/api/users/delete`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      // Redirect the user to a separate page after account deletion
+      navigate("/account-deleted");
+    } catch (error) {
+      console.error("Failed to delete account:", error);
+    }
+  };
+
+  const openDeleteAccountPopup = () => {
+    // Clear all error messages
+    setPasswordError("");
+    setUsernameError("");
+    setEmailError("");
+    setUpdateErrorMessage("");
+    setUpdateSuccessMessage("");
+
+    // Create a modal/pop-up for delete account confirmation
+    const modal = document.createElement("div");
+    modal.className = "delete-account-modal";
+
+    // Close button for the modal
+    const closeButton = document.createElement("span");
+    closeButton.className = "close-button";
+    closeButton.textContent = "✖️";
+    closeButton.addEventListener("click", () => {
+      modal.remove(); // Close the modal when clicking the close button
+    });
+
+    // Delete account confirmation message
+    const message = document.createElement("p");
+    message.textContent = "Are you sure you want to delete your account?";
+
+    // Buttons for confirming or cancelling the delete action
+    const confirmButton = document.createElement("button");
+    confirmButton.className = "confirm-delete-account-button";
+    confirmButton.textContent = "Yes, delete my account";
+    confirmButton.addEventListener("click", async () => {
+      await handleDeleteAccount(); // Execute the delete account function
+      modal.remove(); // Close the modal after deleting the account
+    });
+
+    const cancelButton = document.createElement("button");
+    cancelButton.className = "cancel-delete-account-button";
+    cancelButton.textContent = "Cancel";
+    cancelButton.addEventListener("click", () => {
+      modal.remove(); // Close the modal when clicking the close button
+    });
+
+    // Append elements to the modal
+    modal.appendChild(closeButton);
+    modal.appendChild(message);
+    modal.appendChild(confirmButton);
+    modal.appendChild(cancelButton);
+
+    // Append the modal to the document body
+    document.body.appendChild(modal);
+  };
+
   return (
     <div className="user-settings-container">
       <div className="current-info">
@@ -269,6 +338,14 @@ function UserSettings({ user, onUpdateUser }) {
             onChange={togglePasswordVisibility}
           />
           <label htmlFor="showPassword">Show Passwords</label>
+        </div>
+        <div className="delete-account-container">
+          <button
+            className="delete-account-button"
+            onClick={openDeleteAccountPopup}
+          >
+            Delete Account
+          </button>
         </div>
         <div>
           {updateErrorMessage && (
