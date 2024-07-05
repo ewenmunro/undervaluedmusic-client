@@ -840,7 +840,7 @@ function MusicListLanding() {
         <th>Music Info</th>
         <th>Heard of Before</th>
         <th>Score Music</th>
-        <th>*Listen</th>
+        <th>Listen</th>
         <th>Share Music</th>
       </tr>
     );
@@ -924,12 +924,12 @@ function MusicListLanding() {
   return (
     <div className="music-list">
       <div className="custom-alert"></div>
-      <p>
+      {/* <p>
         *Disclaimer: All available <b>Listen</b> buttons to Amazon are affiliate
         links. <i>Undervalued Music</i> will make a commission on the sale you
         make through the link. It is no extra cost to you to use the link, it's
         simply another way to support <i>Undervalued Music</i>.
-      </p>
+      </p> */}
       {message && <p className="mention-rating-loading-message">{message}</p>}
       {renderTableHeader()}
     </div>

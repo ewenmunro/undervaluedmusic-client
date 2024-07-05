@@ -132,15 +132,15 @@ const MusicDetails = () => {
       <p>
         <b>Artist:</b> {music.artist}
       </p>
-      <p>
+      {/* <p>
         *Disclaimer: If the <b>Listen</b> button is available and goes to
         Amazon, then it is an affiliate link. <i>Undervalued Music</i> will make
         a commission on the sale you make through the link. It is no extra cost
         to you to use the link, it's simply another way to support{" "}
         <i>Undervalued Music</i>.
-      </p>
+      </p> */}
       <p>
-        <b>*Listen:</b>
+        <b>Listen:</b>
       </p>
       {music.listen_link ? (
         <button
